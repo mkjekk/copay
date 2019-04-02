@@ -108,19 +108,21 @@
     "sign:bitpay-macos": "gpg -u 1112CFA1 --output desktop/BitPay.dmg.sig --detach-sig desktop/BitPay.dmg",
     "sign:bitpay-linux": "gpg -u 1112CFA1 --output desktop/BitPay-linux.zip.sig --detach-sig desktop/BitPay-linux.zip",
     "sign:bitpay-windows": "gpg -u 1112CFA1 --output desktop/BitPay.exe.sig --detach-sig desktop/BitPay.exe",
-    "verify:bitpay-desktop": "gpg --verify desktop/BitPay-linux.zip.sig desktop/BitPay-linux.zip; gpg --verify desktop/BitPay.exe.sig desktop/BitPay.exe; gpg --verify desktop/BitPay.dmg.sig desktop/BitPay.dmg"
+    "verify:bitpay-desktop": "gpg --verify desktop/BitPay-linux.zip.sig desktop/BitPay-linux.zip; gpg --verify desktop/BitPay.exe.sig desktop/BitPay.exe; gpg --verify desktop/BitPay.dmg.sig desktop/BitPay.dmg",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "@angular/common": "5.2.10",
     "@angular/compiler": "5.2.10",
-    "@angular/compiler-cli": "5.2.10",
+    "@angular/compiler-cli": "7.2.6",
     "@angular/core": "5.2.10",
     "@angular/forms": "5.2.10",
     "@angular/http": "5.2.10",
     "@angular/platform-browser": "5.2.10",
     "@angular/platform-browser-dynamic": "5.2.10",
     "@angular/tsc-wrapped": "4.4.6",
-    "@biesbjerg/ngx-translate-po-http-loader": "3.0.1",
+    "@biesbjerg/ngx-translate-po-http-loader": "3.1.0",
     "@ionic-native/android-fingerprint-auth": "4.11.0",
     "@ionic-native/clipboard": "4.11.0",
     "@ionic-native/core": "4.11.0",
@@ -143,13 +145,13 @@
     "@zxing/ngx-scanner": "1.2.0",
     "angular2-moment": "1.7.1",
     "bitauth": "git+https://github.com/bitpay/bitauth.git#copay",
-    "bitcore-wallet-client": "6.7.5",
+    "bitcore-wallet-client": "6.8.0",
     "buffer-compare": "1.1.1",
-    "cordova": "8.0.0",
+    "cordova": "9.0.0",
     "cordova-android": "7.1.0",
     "cordova-clipboard": "1.2.1",
     "cordova-custom-config": "5.0.2",
-    "cordova-ios": "4.5.4",
+    "cordova-ios": "5.0.0",
     "cordova-plugin-add-swift-support": "1.7.2",
     "cordova-plugin-android-fingerprint-auth": "1.4.3",
     "cordova-plugin-compat": "1.2.0",
@@ -160,7 +162,7 @@
     "cordova-plugin-file": "6.0.1",
     "cordova-plugin-globalization": "1.11.0",
     "cordova-plugin-inappbrowser": "2.0.2",
-    "cordova-plugin-ionic-webview": "1.2.1",
+    "cordova-plugin-ionic-webview": "2.2.0",
     "cordova-plugin-network-information": "2.0.1",
     "cordova-plugin-qrscanner": "2.6.0",
     "cordova-plugin-screen-orientation": "3.0.1",
@@ -179,16 +181,17 @@
     "ionic-angular": "3.9.2",
     "ionic-plugin-keyboard": "2.2.1",
     "ionicons": "3.0.0",
-    "lodash": "4.17.4",
+    "lodash": "4.17.11",
     "ngx-qrcode2": "0.1.0",
     "papaparse": "4.3.6",
-    "preconditions": "2.2.0",
+    "preconditions": "2.2.2",
     "rxjs": "5.5.6",
-    "simple-plist": "0.2.1",
+    "simple-plist": "1.0.0",
     "sw-toolbox": "3.6.0",
     "text-encoding": "0.6.4",
     "ts-md5": "1.2.2",
-    "zone.js": "0.8.19"
+    "zone.js": "0.8.19",
+    "snyk": "^1.145.0"
   },
   "devDependencies": {
     "@angular/cli": "1.7.4",
@@ -290,5 +293,6 @@
   },
   "prettier": {
     "singleQuote": true
-  }
+  },
+  "snyk": true
 }
